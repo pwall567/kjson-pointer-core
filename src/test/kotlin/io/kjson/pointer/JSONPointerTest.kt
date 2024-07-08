@@ -262,6 +262,16 @@ class JSONPointerTest {
         assertSame(JSONPointer.root, pointer)
     }
 
+    @Test fun `should create JSON Pointer from a pointer string`() {
+        val pointer = JSONPointer.from("/abc/0")
+        expect(JSONPointer("/abc/0")) { pointer }
+    }
+
+    @Test fun `should return root JSON Pointer for empty string`() {
+        val pointer = JSONPointer.from("")
+        assertSame(JSONPointer.root, pointer)
+    }
+
     @Test fun `should create JSON Pointer from array`() {
         val array = arrayOf("abc", "0")
         val pointer = JSONPointer.from(array)

@@ -41,6 +41,13 @@ To create a pointer from a `vararg` list of pointer tokens (**not** encoded):
 ```
 This creates a pointer identical to the one above.
 
+To create a pointer from pointer string (encoded):
+```kotlin
+    val pointer = JSONPointer.from("/prop1/0")
+```
+This also creates a pointer identical to the one above (the reason for using this function rather than the constructor
+is that `from` returns the constant `root` if the string is empty).
+
 To create a pointer from an array of pointer tokens (**not** encoded):
 ```kotlin
     val pointer = JSONPointer.from(arrayOf("prop1", "0"))
@@ -68,7 +75,7 @@ it is applied.
 
 To create a pointer to a child property of the element addressed by the current pointer:
 ```kotlin
-    val newPointer = pointer.child("prop1")
+    val newPointer = rootPointer.child("prop1")
 ```
 
 To create a pointer to a child array element of the element addressed by the current pointer:
@@ -92,7 +99,7 @@ specific structure.
 
 For those who prefer the syntax, all three of the `child()` operations may be expressed using a `+` (plus) operator:
 ```kotlin
-    val newPointer = pointer + "prop1"
+    val newPointer = rootPointer + "prop1"
 ```
 ```kotlin
     val newPointer2 = newPointer + 0
@@ -124,30 +131,31 @@ Attempting to navigate to the parent of the root node will result in an exceptio
 
 The `toString()` function will return a string in the encoded form specified in the
 [JSON Pointer Specification](https://tools.ietf.org/html/rfc6901).
+Note that the string representation of the root pointer is an empty string.
 
 
 
 ## Dependency Specification
 
-The latest version of the library is 1.0, and it may be obtained from the Maven Central repository.
+The latest version of the library is 1.1, and it may be obtained from the Maven Central repository.
 
 ### Maven
 ```xml
     <dependency>
       <groupId>io.kjson</groupId>
       <artifactId>kjson-pointer-core</artifactId>
-      <version>1.0</version>
+      <version>1.1</version>
     </dependency>
 ```
 ### Gradle
 ```groovy
-    implementation 'io.kjson:kjson-pointer-core:1.0'
+    implementation 'io.kjson:kjson-pointer-core:1.1'
 ```
 ### Gradle (kts)
 ```kotlin
-    implementation("io.kjson:kjson-pointer-core:1.0")
+    implementation("io.kjson:kjson-pointer-core:1.1")
 ```
 
 Peter Wall
 
-2024-07-04
+2024-07-08

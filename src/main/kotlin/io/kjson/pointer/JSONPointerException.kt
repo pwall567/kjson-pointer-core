@@ -32,15 +32,14 @@ import io.kjson.JSONException
  *
  * @author  Peter Wall
  */
-class JSONPointerException(
+open class JSONPointerException(
     /** The base text of the message. */
     text: String,
     /** An optional key, strongly typed as a [JSONPointer]. */
-    override val key: JSONPointer? = null,
-) : JSONException(text, key) {
+    val pointer: JSONPointer? = null,
+) : JSONException(text, pointer) {
 
-    /** The [JSONPointer] key. */
-    val pointer: JSONPointer?
-        get() = key
+    override val key: JSONPointer?
+        get() = pointer
 
 }

@@ -210,6 +210,11 @@ class JSONPointer internal constructor(internal val tokens: Array<String>) {
             if (tokens.isEmpty()) root else JSONPointer((tokens as Array<String>).copyOf())
 
         /**
+         * Create a `JSONPointer` from a JSON Pointer string.
+         */
+        fun from(pointer: String): JSONPointer = if (pointer.isEmpty()) root else JSONPointer(pointer)
+
+        /**
          * Create a `JSONPointer` from an array of tokens.
          */
         fun from(array: Array<String>): JSONPointer = if (array.isEmpty()) root else JSONPointer(array.copyOf())
@@ -261,7 +266,7 @@ class JSONPointer internal constructor(internal val tokens: Array<String>) {
             } catch (e: Exception) {
                 throw JSONPointerException("Illegal URI fragment - \"$fragment\"").withCause(e)
             }
-            return JSONPointer(pointer)
+            return from(pointer)
         }
 
         /**
