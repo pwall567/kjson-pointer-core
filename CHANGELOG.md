@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
+## [1.2] - 2024-07-10
+### Changed
+- `pom.xml`: updated dependency version
+
 ## [1.1] - 2024-07-08
 ### Changed
 - `JSONPointer`: added `from(string)`
