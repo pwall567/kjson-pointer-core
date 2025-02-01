@@ -25,15 +25,15 @@
 
 package io.kjson.pointer
 
-import net.pwall.text.CharMapResult
-import net.pwall.text.StringMapper.checkLength
-import net.pwall.text.StringMapper.mapCharacters
-import net.pwall.text.StringMapper.mapSubstrings
-import net.pwall.text.URIStringMapper.decodeURI
-import net.pwall.text.URIStringMapper.encodeURI
-import net.pwall.text.UTF8StringMapper.decodeUTF8
-import net.pwall.text.UTF8StringMapper.encodeUTF8
-import net.pwall.util.ImmutableList
+import io.jstuff.util.ImmutableList
+import io.kstuff.text.CharMapResult
+import io.kstuff.text.StringMapper.checkLength
+import io.kstuff.text.StringMapper.mapCharacters
+import io.kstuff.text.StringMapper.mapSubstrings
+import io.kstuff.text.URIStringMapper.decodeURI
+import io.kstuff.text.URIStringMapper.encodeURI
+import io.kstuff.text.UTF8StringMapper.decodeUTF8
+import io.kstuff.text.UTF8StringMapper.encodeUTF8
 
 /**
  * JSON Pointer.
