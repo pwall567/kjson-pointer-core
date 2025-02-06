@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>kjson-pointer-core</artifactId>
-  <version>1.3</version>
+  <version>1.4</version>
   <name>JSON Pointer for Kotlin</name>
   <description>JSON Pointer core functionality for Kotlin</description>
   <packaging>jar</packaging>
@@ -80,6 +80,7 @@
       <groupId>io.kstuff</groupId>
       <artifactId>should-test</artifactId>
       <version>4.4</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>

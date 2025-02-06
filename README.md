@@ -137,25 +137,25 @@ Note that the string representation of the root pointer is an empty string.
 
 ## Dependency Specification
 
-The latest version of the library is 1.3, and it may be obtained from the Maven Central repository.
+The latest version of the library is 1.4, and it may be obtained from the Maven Central repository.
 
 ### Maven
 ```xml
     <dependency>
       <groupId>io.kjson</groupId>
       <artifactId>kjson-pointer-core</artifactId>
-      <version>1.3</version>
+      <version>1.4</version>
     </dependency>
 ```
 ### Gradle
 ```groovy
-    implementation 'io.kjson:kjson-pointer-core:1.3'
+    implementation 'io.kjson:kjson-pointer-core:1.4'
 ```
 ### Gradle (kts)
 ```kotlin
-    implementation("io.kjson:kjson-pointer-core:1.3")
+    implementation("io.kjson:kjson-pointer-core:1.4")
 ```
 
 Peter Wall
 
-2025-02-01
+2025-02-06
